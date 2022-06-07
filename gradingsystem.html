@@ -1,0 +1,48 @@
+<html>
+<head></head>
+<body bgcolor="#d5e2f6"><marquee>
+   <h1>Grading System</h1>
+    <label>Enter your marks here</label><input type="text" id="mark"><br>
+    <br> 
+    <button class="btn3" onclick="Grade()">Grade</button>
+  <div id="result">
+<div id="head3"><h1>Grade</h1></div>
+<div id="grade">
+<script>
+function Grade(){
+   var sub1 = parseInt(document.getElementById("mark").value);   
+   if(sub1>100)
+  {
+    alert("Please Enter Marks in range of 100");
+  }else {
+     var total= sub1;
+     var avg=total/1;
+     
+     if(avg>=70 && avg<=100)
+     {
+       document.getElementById("grade").innerHTML="You Got A Grade";
+     }
+     else if(avg>=60 && avg<=69)
+     {
+       document.getElementById("grade").innerHTML="You Got B Grade";
+     }
+     else if(avg>=50 && avg<=59)
+     {
+       document.getElementById("grade").innerHTML="You Got C Grade";
+     }
+     else if(avg>=40 && avg<=49)
+     {
+       document.getElementById("grade").innerHTML="You Got D Grade";
+     }
+     else if(avg>=0 && avg<=39)
+     {
+       document.getElementById("grade").innerHTML="You Got E Grade";
+     }
+        
+}
+}
+
+ </script>
+</marquee>
+ </body>
+ </html>
